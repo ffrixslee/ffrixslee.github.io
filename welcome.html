@@ -1,16 +1,72 @@
+<!-- This is a comment. 
+strong tag == font-weight:bold
+u tag == text-decoration:underline
+-->
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<style>
+  .sienna-text {
+  color: rgb(160, 82, 45); 
+  }
+  .red-text {
+    color : red
+  }
+  h2 {
+    text-align: center;
+  }
+  p {
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: justify;
+  }
+  ul {
+    font-family: Lobster;
+  }
+  .smaller-image {
+    width: 100px;
+  }
+  .thin-pink-border {
+    border-color: pink;
+    border-width: 10px;
+    border-style: groove;
+    border-radius: 25%;
+  } 
+  .white-background {
+    background-color: whitesmoke;
+  }
+  #blog-form {
+    background-color: turquoise;
+  }
+  .injected-text {
+    margin-bottom: -25px;
+    text-align: center;
+  }
+
+  [type="checkbox"] {
+    margin: 10px 0px 15px 0px;
+</style>
 ---
 ---
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The best page ever</title>
+  </head>
+  
+  <body>
 <a href="#Blog">Jump to Blog</a>
-<h1>Welcome to my Zanarkand</h>
-    <img
+<h1 style = "color : pink ;">Welcome to my Zanarkand</h>
+    
+    <img class="smaller-image thin-pink-border"
     src="https://c4.wallpaperflare.com/wallpaper/256/652/931/city-sky-beautiful-stars-space-hd-wallpaper-preview.jpg"
     alt="Beautiful Zanarkand city">
-    <h2>*Ahem* May I have your attention, please...</h2>
-    <p><i>Here, you'll encounter all sorts of treasures and wild beasts from my imaginary mind palace. If you ever get lost, feel free to touch the save sphere(aka table of contents) and return to the point where you last started.</i></p>
-    <p>All image credits go to the original author</p>
+    <h2 class="red-text">*Ahem* May I have your attention, please...</h2>
+
+    <p style = "color : teal ;"><i>Here, you'll encounter all sorts of treasures and wild beasts from my imaginary mind palace. If you ever get lost, feel free to touch the save sphere(aka table of contents) and return to the point where you last started.</i></p>
+    <p style = "color:violet"><strong> image credits go to the original author</strong></p>
 
 <a href="https://github.com/ffrixslee">LinkedIn</a>
 <Blog id ="treasures">Blog</Blog>
+<a href="https://open.spotify.com/user/21rrac5quc6xpcc5vvver4uji?si=WnUNWJtRRjqrdGKlZl_IoQ">Spotify</a>
 
 <p> View more
     <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>
@@ -20,13 +76,65 @@
 
 <ul>
     <li>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</li>
-    <li>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</li>
+    <li>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip <u>scratched.</u></li>
   </ul>
 
+  <div class="white-background">
   <p>Top 3 things cats hate:</p>
   <ol>
     <li>bathing</li>
     <li>cuddling</li>
     <li>dogs</li>
    </ol>
+  </div>
 
+   <form action="https://freecatphotoapp.com/submit-cat-photo">
+    <input type="text" required placeholder="cat photo URL">
+    <button type="submit">Submit</button> 
+
+    <br>
+
+    <label for="indoor">
+      <input id="indoor" type="radio" name="indoor-outdoor">Indoor
+    </label>
+    <label for="outdoor">
+      <input id="outdoor" type="radio" name="indoor-outdoor">Outdoor
+    </label>
+
+    <br>
+
+    <form>
+      <label for="loving"><input id="loving" type="checkbox" name="personality"> Loving</label>
+      <label for="angry"><input id="angry" type="checkbox" name="personality"> Angry</label>
+      <label for="shy"><input id="shy" type="checkbox" name="personality"> Shy</label>
+      </form>
+
+      <br>
+      <br>
+
+      <form id="blog-form">
+        <label for="indoor"><input id="indoor" value="indoor" type="radio" name="indoor-outdoor" checked> Indoor</label>
+        <label for="outdoor"><input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor"> Outdoor</label><br>
+        <label for="loving"><input id="loving" value="loving" type="checkbox" name="personality"> Loving</label>
+        <label for="lazy"><input id="lazy" value="lazy" type="checkbox" name="personality" checked> Lazy</label>
+        <label for="energetic"><input id="energetic" value="energetic" type="checkbox" name="personality"> Energetic</label><br>
+        <input type="text" placeholder="cat photo URL" required>
+        <button type="submit">Submit</button>
+      </form>
+
+      <h5 class="injected-text">margin</h5>
+
+      <!-- Start of ChatBot (www.chatbot.com) code -->
+<script type="text/javascript">
+    window.__be = window.__be || {};
+    window.__be.id = "5fd97254e238f0000778d5d0";
+    (function() {
+        var be = document.createElement('script'); be.type = 'text/javascript'; be.async = true;
+        be.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.chatbot.com/widget/plugin.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(be, s);
+    })();
+</script>
+<!-- End of ChatBot code -->
+    </body>
+
+</html>
